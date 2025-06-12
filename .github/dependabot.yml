@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Enable version updates for npm (JavaScript/Node.js)
+  - package-ecosystem: "npm"
+    directory: "/" # Set to the directory containing your package.json
+    schedule:
+      interval: "weekly" # Options: "daily", "weekly", "monthly"
+    open-pull-requests-limit: 5
+
+  # Enable version updates for GitHub Actions workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
