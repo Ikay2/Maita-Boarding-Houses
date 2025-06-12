@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # For JavaScript/Node.js projects using npm or yarn
+  - package-ecosystem: "npm"
+    directory: "/" # Root directory, change if your package.json is elsewhere
+    schedule:
+      interval: "weekly" # or "daily", "monthly"
+    open-pull-requests-limit: 5
+
+  # For GitHub Actions workflow dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # For Python projects using pip
+  - package-ecosystem: "pip"
+    directory: "/" # Change if your requirements.txt is in a subdir
+    schedule:
+      interval: "weekly"
+
+  # For Docker projects (Dockerfile)
+  - package-ecosystem: "docker"
+    directory: "/" # Change if Dockerfile is in a subdir
+    schedule:
+      interval: "weekly"
